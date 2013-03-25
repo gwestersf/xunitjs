@@ -31,6 +31,7 @@ Setup and teardown are intentionally omitted from the xUnit.js framework; their 
 
 Facts and Fixtures are declared by using C# style attribution (similar to Java annotations) preceding the method being decorated. This attribution allows for declarative rather than functional registration of Facts and Fixtures, in a style familiar to NUnit or xUnit users. 
 
+```js
 [Fixture]
 function StringTests(){
     
@@ -76,6 +77,7 @@ function StringTests(){
     }
 
 }
+```
 
 See the section on Examples below for additional information.
 
@@ -83,6 +85,8 @@ See the section on Examples below for additional information.
 
 All tests have dependencies, at a minimum, the class or file being tested. To facilitate loading these, the default Import attribute of the xUnit.js console runner has been extended with awareness of the application's directory structure. All import statements start from the parent of the core directory, allowing tests to be run equally easily from different branches.
 
+```js
+[Fixture]
 [Import("app/config/MyApp.js")]
 [Import("app/config/MyApp.String.js")]
 [Fixture]
@@ -91,6 +95,7 @@ function StringTests(){
     [...]
 
 }
+```
 
 See the section on Examples below for additional information.
 
@@ -98,6 +103,8 @@ See the section on Examples below for additional information.
 
 xUnit.js provides the ability to indefinitely skip a Fact or Fixture by supplying a Skip attribute, with an optional reason.
 
+```js
+[Fixture]
 [Fixture,Skip]
 function ObsoleteStringTests(){
     [...]
@@ -117,6 +124,7 @@ function StringTests(){
     }
 
 }
+```
 
 See the section on Examples below for additional information.
 
@@ -124,6 +132,8 @@ See the section on Examples below for additional information.
 
 xUnit.js provides the ability to specify arbitrary trait information on Facts or Fixtures. This can be used to group similar concepts that span across multiple Facts, Fixtures, and Files into common test runs. These traits can be specified in a comma delimited list to the console runner trait or -trait arguments or ant target properties jstest.trait or jstest.-trait. In practice, this can be used to isolate Integration tests from Strict unit tests.
 
+```js
+[Fixture]
 [Fixture,Trait("Integration")]
 function DomIntegrationTests(){
     [...]
@@ -143,6 +153,7 @@ function StringTests(){
     }
 
 }
+```
 
 See the section on Examples below for additional information.
 
@@ -150,6 +161,7 @@ See the section on Examples below for additional information.
 
 Assertions are provided by the xUnit.js.Assert class (globally available as Assert in tests). The following static methods are supported:
 
+```js
 Assert.AssignableFrom(expected, actual);
 
 Assert.Contains(expected, actual);
@@ -193,6 +205,7 @@ Assert.True(actual,message);
 Assert.Type(expected, actual);
 
 Assert.Undefined(actual);
+```
 
 See the section on Examples below for additional information.
 
@@ -200,6 +213,7 @@ See the section on Examples below for additional information.
 
 Rather than specifying that an exception is expected when calling a method, xUnit.js provides functionality for recording thrown exceptions in a manner that still allows for normal Arrange-Act-Assert patterns. This is accomplished by using Record.Exception() to catch the error that is thrown during method invocation.
 
+```js
 [Fixture]
 function StringTests(){
     
@@ -223,6 +237,7 @@ function StringTests(){
     }
 
 }
+```
 
 See the section on Examples below for additional information.
 
@@ -230,12 +245,15 @@ See the section on Examples below for additional information.
 
 Members of existing Objects can be easily mocked for the duration of an invocation. For this purpose, use the Test.Tools.MyApp.Mocks class (globally available as Mocks in tests):
 
+```js
 var mockMethod=Mocks.GetMock(targetInstance,"targetMember",mock); 
+```
 
 To test your Fact statement in the context of the mock, call the mockMethod with a Function delegate. This delegate will be executed by the mockMethod after replacing the specified "targetMember" on the targetInstance with the suggested mock object or method. Upon completion of the delegate, the mocked member will be restored to its original value. To access the original value, you can use the property .mocked on the suggested mock object or method. 
 
 Note that for obvious reasons it is not possible to access the original value via mock.mocked if the value of mock is null or undefined.
 
+```js
 [Fixture]
 function StringTests(){
     
@@ -264,6 +282,7 @@ function StringTests(){
     }
 
 }
+```
 
 See the section on Examples below for additional information.
 
@@ -271,6 +290,7 @@ See the section on Examples below for additional information.
 
 Some objects or classes require many, complex, structural or hierarchical dependencies. To facilitate boundary testing, these dependencies can be supplied via Stubs. Stubbed objects supply property and method expectations. Stubbed methods -- including methods on stubbed objects -- provide rudimentary recording, reporting, and expectation functionality, such as tracking the number of invocations; storing the arguments supplied to the method; and allowing the return value of the method to be set explicitly. To create stubs, use the Test.Tools.MyApp.Stubs.StubFactory class (globally available as Stubs in tests):
 
+```js
 var stubMethod=Stubs.CreateMethod(targetInstance,methodName,[argumentName...],returnValue);
 
 var stubMethod=Stubs.CreateVoidMethod(targetInstance,methodName,[argumentName...]);
@@ -289,6 +309,7 @@ var stubObject=Stubs.CreateObject(
 );
 
 var stubList=Stubs.CreateList(inputList,{methodName:{}},{propertyName:"propertyValue"});
+```
 
 See the section on Examples below for additional information.
 
