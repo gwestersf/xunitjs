@@ -1,0 +1,418 @@
+body{
+	background-color:#efefef;	
+	font-size:1em;
+	font-family:"Segoe UI", "Courier New";
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+button
+{
+	cursor:pointer;	
+}
+
+button:focus,
+button:hover,
+button.Focused,
+button.Hover
+{
+	background-color:#e1e1ff !important;
+	border:solid 1px darkblue !important;
+}
+
+button.Checked
+{
+	background-color:#cacaff !important;
+	border:solid 1px darkblue !important;
+}
+
+option.All
+{
+	font-style:italic;
+}
+
+
+select,
+textarea
+{
+	background-color:white;
+	float:left;
+	height:100%;
+	width:100%;	
+}
+
+.Clear
+{
+	clear:both;	
+}
+
+.Menu{
+	background-color:#dfdfdf;
+	border-bottom:2px outset;
+	padding:5px 5px 5px 10px;
+	width:auto;
+}
+
+.Menu button{
+	background-color:#eee;
+	background-image:url('IconStrip.png');
+	background-position:0px -20px;
+	background-repeat:no-repeat;
+	border:solid 1px #999;
+	display:inline-block;
+	height:24px;
+	margin-right:.2em;
+	overflow:hidden;
+	width:24px;
+}
+
+.Menu button.AddFile
+{
+	background-position:-60px 1px;
+}
+
+.IE .Menu button.AddFile
+{
+	background-position:-61px 0px;
+}
+
+.Menu button.RemoveFile
+{
+	background-position:-81px 1px;
+}
+
+.IE .Menu button.RemoveFile
+{
+	background-position:-82px 0px;
+}
+
+.Menu button.ReloadFacts
+{
+	background-position:-139px 1px;
+}
+
+.IE .Menu button.ReloadFacts
+{
+	background-position:-140px 0px;
+}
+
+.Menu button.RunFacts
+{
+	background-position:-100px 1px;
+}
+
+.IE .Menu button.RunFacts
+{
+	background-position:-101px 0px;
+}
+
+.Menu button.StopFacts
+{
+	background-position:-119px 1px;
+}
+
+.IE .Menu button.StopFacts
+{
+	background-position:-120px 0px;
+}
+
+.Menu .Separator
+{
+	border:1px inset;
+	display:inline;
+	font-size:1em;
+	height:20px;
+	margin:0 .6em 0 .3em !important;
+	overflow:hidden !important;
+	padding:0;
+	width:2px !important;
+	vertical-align:text-top;
+}
+
+.FF .Menu div.Separator,
+.WebKit .Menu div.Separator
+{
+	position:relative;
+	top:5px;
+}
+
+.UploadForm
+{
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:-185px;
+	top:-10px;
+	visibility:hidden;
+}
+
+.FileInput
+{
+	visibility:hidden;
+}
+
+.FF .FileInput{
+	left:0;
+	opacity:0;
+	position:absolute;
+	top:20px;
+	visibility:visible;
+}
+
+.UploadFrame
+{
+	position:absolute;
+	top:-300px;
+	visibility:hidden;	
+}
+
+.Filters
+{
+	border-style:groove;
+	border-width:2px;
+	float:left;
+	margin:15px 10px 15px 10px;
+	padding:0 .5em .5em .5em;
+	xposition:relative;
+	width:300px;
+}
+
+.Filters label
+{
+	background-color:#efefef;	
+	left:-.1em;
+	padding:.2em;
+	position:relative;
+	top:-.8em;
+}
+
+.Filters div label
+{
+	clear:left;
+	float:none;
+	display:block;
+	padding:0;
+	position:static;
+	top:0;
+}
+
+.Filters .Search
+{
+	margin:-8px 0 26px 0;
+}
+
+.FF .Filters .Search
+{
+	margin-top:-6px;	
+}
+
+.Filters .Search label
+{
+	display:inline;
+	margin:0px .2em 0 0;
+}
+
+.Filters .Search input
+{
+	margin:0;
+	width:100%;	
+}
+
+.Filters .Files
+{
+	margin-top:-27px;
+}
+
+.FF .Filters .Files
+{
+	margin-top:-29px;
+}
+
+.Filters .Files .FileList
+{
+	float:left;
+	height:100%;
+	margin:0;
+}
+
+.Filters .Traits
+{
+	clear:left;	
+	height:250px;
+}
+
+.Filters .Traits .TraitList
+{
+	height:230px;
+}
+
+.IE .Filters .Traits
+{
+	position:relative;
+	top:7px;
+}
+
+.Run
+{
+	border-style:groove;
+	border-width:2px;
+	float:left;
+	margin:15px 10px 15px 0;
+	padding:0 .5em .5em .5em;
+}
+
+.Run .Facts,
+.Run .Filters,
+.Run .Output
+{
+	margin:0;
+	width:100%;
+}
+
+.Run label
+{
+	background-color:#efefef;	
+	display:block;
+	float:left;
+	left:.2em;
+	padding:.2em;
+	position:relative;
+	top:-1em;
+}
+.Run div label
+{
+	clear:left;
+	float:none;
+	display:block;
+	padding:0;
+	position:static;
+	top:0;
+}
+
+
+.Run .Filters
+{
+	border:0 none;	
+	clear:left;
+	display:block;
+	height:24px;
+	margin:-1em 0 0 1px;
+	padding:0;
+	xposition:relative;
+	xtop:-2em;
+}
+
+.Run .Filters label
+{
+	display:inline;
+	left:0px;
+	margin-left:0;
+	margin-right:5px;
+	position:relative;
+	top:5px;
+}
+
+.IE .Run .Filters label
+{
+	position:static;	
+}
+
+.Run .Filters button
+{
+	background-color:#eeeeee;
+	background-image:url('IconStrip.png');
+	background-position:0px -20px;
+	background-repeat:no-repeat;
+	border:solid 1px #999999;
+	xfloat:left;
+	height:24px;
+	margin:1px 0px 0px 0px;
+	overflow:hidden;
+	padding:0;
+	width:24px;
+}
+
+.Run .Filters button.Failure
+{
+	background-position:-19px 1px;
+}
+
+.Run .Filters button.Skipped
+{
+	background-position:-39px 0px;
+}
+
+.Run .Filters button.Success
+{
+	background-position:1px 1px;
+}
+
+.Run .Facts
+{
+	clear:left;
+}
+
+.Run .Facts .FactList
+{
+	float:left;
+	height:100%;
+	margin:0;
+}
+
+.Run .Facts .FactList option
+{
+}
+
+.Run .Facts .FactList option.Failure
+{
+	background-color:#CC0000;
+	color:White;
+}
+
+.Run .Facts .FactList option.Skipped
+{
+	background-color:Orange;
+}
+
+.Run .Facts .FactList option.Success
+{
+	background-color:lime;
+}
+
+.Run .Output
+{
+	clear:left;
+	height:150px;
+}
+
+.Run .Output .OutputList
+{
+	background-color:Window;
+	border:inset 2px;
+	height:145px;
+	padding:3px 5px;
+	overflow:auto;
+}
+
+.Run .Output .OutputList .Failure
+{
+	color:#CC0000;	
+}
+
+.Run .Output .OutputList .Skipped
+{
+	color:Orange;
+}
+
+.Selected{
+	background-color:highlight !important;
+	color:highlighttext !important;
+}
+
+.Code
+{
+	font-family:"Courier New",Monospace;
+	font-size:10pt;
+	white-space: pre;
+}

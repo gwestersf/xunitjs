@@ -1,0 +1,66 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8" />
+		<title>xUnit.js.Gui Test Harness</title>
+		<link rel="stylesheet" type="text/css" href="Runner.css" />
+		<script type="text/javascript" src="xUnit.js.Gui.js"></script>
+		<script type="text/javascript" src="Runner.js"></script>
+		<script type="text/javascript" src="Config.js"></script>
+	</head>
+	<body>
+		<div id="xunit:gui:menu" class="Menu">
+			<button id="xunit:gui:menu:file:add" class="AddFile" title="Add File - (Ctrl+Shift+A)"></button>
+			<button id="xunit:gui:menu:file:remove" class="RemoveFile" title="Remove File - (Ctrl+Shift+Z)"></button>
+			<button id="xunit:gui:menu:facts:reload" class="ReloadFacts" title="Reload Facts - (Ctrl+Shift+E)"></button>
+			<div class="Separator"></div>
+			<button id="xunit:gui:menu:facts:run" class="RunFacts" title="Run All - (Ctrl+Shift+X)"></button>
+			<button id="xunit:gui:menu:facts:stop" class="StopFacts" title="Stop Test Run - (Ctrl+Shift+S)"></button>
+		</div>
+		<div id="xunit:gui:filters" class="Filters">
+			<label>Filters</label>
+			<div id="xunit:gui:filters:search" class="Search">
+				<label id="xunit:gui:filters:search:label" for="xunit:gui:filters:search:input">Search:</label>
+				<input id="xunit:gui:filters:search:input" accesskey="s" />
+				<div class="Clear"></div>
+			</div>
+			<div id="xunit:gui:filters:files" class="Files">
+				<label for="xunit:gui:filters:files:list">Files:</label>
+				<select id="xunit:gui:filters:files:list" class="FileList" multiple="multiple">
+					<option value="-1" class="All">[All Files]</option>
+				</select>
+				<div class="Clear"></div>
+			</div>
+			<div id="xunit:gui:filters:traits" class="Traits">
+				<label for="xunit:gui:filters:traits:list">Traits:</label>
+				<select id="xunit:gui:filters:traits:list" class="TraitList" multiple="multiple">
+					<option value="-1" class="All">[All Traits]</option>
+				</select>
+				<div class="Clear"></div>
+			</div>
+		</div>
+		<div id="xunit:gui:run" class="Run">
+			<label>Run <span id="xunit:gui:run:facts:count"></span></label>
+			<div id="xunit:gui:run:facts:filters" class="Filters">
+				<button id="xunit:gui:run:facts:filters:success" class="Success"></button>
+				<label id="xunit:gui:run:facts:success:count" for="xunit:gui:run:facts:filters:success">0</label>
+				<button id="xunit:gui:run:facts:filters:failure" class="Failure"></button>
+				<label id="xunit:gui:run:facts:failure:count" for="xunit:gui:run:facts:filters:failure">0</label>
+				<button id="xunit:gui:run:facts:filters:skipped" class="Skipped"></button>
+				<label id="xunit:gui:run:facts:skipped:count" for="xunit:gui:run:facts:filters:skipped">0</label>
+			</div>
+			<div id="xunit:gui:run:facts" class="Facts">
+				<label for="xunit:gui:run:facts:list">Facts:</label>
+				<select id="xunit:gui:run:facts:list" class="FactList" multiple="multiple"></select>
+			</div>
+			<div id="xunit:gui:run:output" class="Output">
+				<label for="xunit:gui:run:output">Output:</label>
+				<div id="xunit:gui:run:output:outputlist" class="OutputList"></div>
+			</div>
+			<div class="Clear"></div>
+		</div>
+		<div class="Clear"></div>
+		<iframe id="xunit:file:upload:frame" class="UploadFrame" name="UploadFrame"></iframe>
+	</body>
+</html>

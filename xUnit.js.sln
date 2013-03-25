@@ -1,0 +1,87 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7FB55CC2-6307-452E-AB47-F14A5DD12B6D}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		ConsoleCommand.exe = ConsoleCommand.exe
+		License.txt = License.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{0C7C7E58-4226-432F-8C7B-EA9166C82AC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{082F82C8-CC98-44DF-8848-FD902109EC40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnit.js", "Source\xUnit.js\xUnit.js.csproj", "{031628C2-5CF1-4BF8-8AB0-514A68B08041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.xUnit.js", "Tests\Test.xUnit.js\Test.xUnit.js.csproj", "{021F74DC-9816-402A-9ED4-6847D9B82975}"
+	ProjectSection(ProjectDependencies) = postProject
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041} = {031628C2-5CF1-4BF8-8AB0-514A68B08041}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnit.js.Console", "Source\xUnit.js.Console\xUnit.js.Console.csproj", "{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnit.js.Attributes", "Source\xUnit.js.Attributes\xUnit.js.Attributes.csproj", "{A7FC63B3-9E48-4BC9-A76D-F7D81556413B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041} = {031628C2-5CF1-4BF8-8AB0-514A68B08041}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnit.js.Gui", "Source\xUnit.js.Gui\xUnit.js.Gui.csproj", "{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.xUnit.js.Console", "Tests\Test.xUnit.js.Console\Test.xUnit.js.Console.csproj", "{C686B74C-EC74-43F5-8872-268B37522C1E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB} = {E4C53C2A-75F1-4FFC-BF44-00E60412EBBB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.xUnit.js.Attributes", "Tests\Test.xUnit.js.Attributes\Test.xUnit.js.Attributes.csproj", "{2AE771FB-0EEB-4311-9103-A1DA66B5DA49}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A7FC63B3-9E48-4BC9-A76D-F7D81556413B} = {A7FC63B3-9E48-4BC9-A76D-F7D81556413B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021F74DC-9816-402A-9ED4-6847D9B82975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021F74DC-9816-402A-9ED4-6847D9B82975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021F74DC-9816-402A-9ED4-6847D9B82975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021F74DC-9816-402A-9ED4-6847D9B82975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7FC63B3-9E48-4BC9-A76D-F7D81556413B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FC63B3-9E48-4BC9-A76D-F7D81556413B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FC63B3-9E48-4BC9-A76D-F7D81556413B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FC63B3-9E48-4BC9-A76D-F7D81556413B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C686B74C-EC74-43F5-8872-268B37522C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C686B74C-EC74-43F5-8872-268B37522C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C686B74C-EC74-43F5-8872-268B37522C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C686B74C-EC74-43F5-8872-268B37522C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE771FB-0EEB-4311-9103-A1DA66B5DA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE771FB-0EEB-4311-9103-A1DA66B5DA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE771FB-0EEB-4311-9103-A1DA66B5DA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE771FB-0EEB-4311-9103-A1DA66B5DA49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{031628C2-5CF1-4BF8-8AB0-514A68B08041} = {0C7C7E58-4226-432F-8C7B-EA9166C82AC2}
+		{E4C53C2A-75F1-4FFC-BF44-00E60412EBBB} = {0C7C7E58-4226-432F-8C7B-EA9166C82AC2}
+		{A7FC63B3-9E48-4BC9-A76D-F7D81556413B} = {0C7C7E58-4226-432F-8C7B-EA9166C82AC2}
+		{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911} = {0C7C7E58-4226-432F-8C7B-EA9166C82AC2}
+		{021F74DC-9816-402A-9ED4-6847D9B82975} = {082F82C8-CC98-44DF-8848-FD902109EC40}
+		{C686B74C-EC74-43F5-8872-268B37522C1E} = {082F82C8-CC98-44DF-8848-FD902109EC40}
+		{2AE771FB-0EEB-4311-9103-A1DA66B5DA49} = {082F82C8-CC98-44DF-8848-FD902109EC40}
+	EndGlobalSection
+EndGlobal

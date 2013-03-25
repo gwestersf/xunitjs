@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF8F2324-2ED1-444C-AF71-4BEA4D7C0911}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xUnit.js.Gui</RootNamespace>
+    <AssemblyName>xUnit.js.Gui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bin\xUnit.js.Gui.js" />
+    <Content Include="bin\System.js.Script.dll" />
+    <Content Include="bin\System.js.Script.pdb" />
+    <Content Include="bin\xUnit.js.Attributes.dll" />
+    <Content Include="bin\xUnit.js.Attributes.pdb" />
+    <Content Include="bin\xUnit.js.dll" />
+    <Content Include="bin\xUnit.js.pdb" />
+    <None Include="IO\Upload.php">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="IO\FileLoader.php">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="IO\Upload.jsp">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <None Include="IO\FileLoader.jsp">
+      <SubType>ASPXCodeBehind</SubType>
+    </None>
+    <Content Include="Config.js" />
+    <Content Include="IO\FileLoader.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="IconStrip.png" />
+    <Content Include="Runner.css" />
+    <Content Include="Runner.html" />
+    <Content Include="IO\Upload.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="xUnit.js.Gui.js" />
+    <Content Include="Runner.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.js.IO, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\System.js\Source\System.js.IO\bin\$(Configuration)\System.js.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.js.Web, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\System.js\Source\System.js.Web\bin\$(Configuration)\System.js.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xUnit.js.Attributes\xUnit.js.Attributes.csproj">
+      <Project>{A7FC63B3-9E48-4BC9-A76D-F7D81556413B}</Project>
+      <Name>xUnit.js.Attributes</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>7357</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>REN "$(ProjectDir)"Config.js Config.jsx
+REN "$(ProjectDir)"Runner.js Runner.jsx
+IF EXIST "$(ProjectDir)"xUnit.js.Gui.js DEL /F "$(ProjectDir)"xUnit.js.Gui.js 
+IF EXIST "$(TargetDir)"xUnit.js.dll DEL /F "$(TargetDir)"xUnit.js.dll
+"$(SolutionDir)"\build.bat "$(ProjectDir)" "$(TargetDir)" "$(TargetName)" "$(TargetPath)" "$(ConfigurationName)" "xUnit.js.Attributes"</PreBuildEvent>
+    <PostBuildEvent>IF EXIST "$(TargetDir)"xUnit.js.Gui.jsx DEL "$(TargetDir)"xUnit.js.Gui.jsx /F
+COPY "$(TargetDir)"xUnit.js.Gui.js "$(ProjectDir)"xUnit.js.Gui.js /y
+REN "$(ProjectDir)"Config.jsx Config.js
+REN "$(ProjectDir)"Runner.jsx Runner.js</PostBuildEvent>
+  </PropertyGroup>
+</Project>
